@@ -9,4 +9,8 @@ setup(
         author_email="uli@gnufix.de",
         license="GPL3",
         packages=["pwpwnd"],
-        zip_safe=False)
+        zip_safe=False,
+        entry_points={
+            'console_scripts': ['pwpwnd = pwpwnd:main']}
+        )
+
