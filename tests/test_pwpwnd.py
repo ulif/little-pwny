@@ -1,4 +1,4 @@
-from pwpwnd import mkhash, num_pwned
+from pwpwnd import mkhash, num_pwned, main
 
 
 def test_mkhash():
@@ -9,3 +9,6 @@ def test_num_pwned():
     status, num = num_pwned("21BD12DC183F740EE76F27B78EB39C8AD972A757")
     assert status == 200
     assert num > 52500
+
+def test_main():
+    assert main("P@ssw0rd") > 52500

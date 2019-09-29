@@ -1,5 +1,6 @@
 import hashlib
 import http.client
+import sys
 
 
 def mkhash(password):
@@ -23,3 +24,9 @@ def num_pwned(hash_val):
     entries = resp.read().decode('utf-8').split('\r\n')
     result = dict([x.split(':') for x in entries]).get(hash_val[5:], 0)
     return resp.status, int(result)
+
+
+def main(argv=None):
+    if argv is None:
+        argv = sys.argv[1]
+    return num_pwned(mkhash(argv))[1]
