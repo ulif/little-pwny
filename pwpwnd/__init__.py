@@ -29,4 +29,4 @@ def num_pwned(hash_val):
 def main(argv=None):
     if argv is None:
         argv = sys.argv[1]
-    return num_pwned(mkhash(argv))[1]
+    print(num_pwned(mkhash(argv))[1])
