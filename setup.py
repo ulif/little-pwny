@@ -11,6 +11,6 @@ setup(
         packages=["pwny"],
         zip_safe=False,
         entry_points={
-            'console_scripts': ['pwpwnd = pwny:main']}
+            'console_scripts': ['pwny = pwny:main']}
         )
 
