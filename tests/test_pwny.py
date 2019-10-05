@@ -1,4 +1,4 @@
-from pwpwnd import mkhash, num_pwned, main
+from pwny import mkhash, num_pwned, main
 
 
 def test_mkhash():
