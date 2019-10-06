@@ -10,5 +10,7 @@ def test_num_pwned():
     assert status == 200
     assert num > 52500
 
-def test_main():
-    assert main("P@ssw0rd") > 52500
+def test_main(capsys):
+    main("P@ssw0rd")
+    out, err = capsys.readouterr()
+    assert int(out) > 52000
