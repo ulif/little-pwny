@@ -30,3 +30,13 @@ Then, from this directory, install the package:
 
      $ pip install -e .
 
+
+## Running Tests
+
+We use `tox` and `py.test` for testing. So,
+
+     $ pip install tox
+     $ tox
+
+should run all tests.
+
