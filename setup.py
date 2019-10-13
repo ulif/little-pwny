@@ -18,10 +18,10 @@ setup(
             (
                 "License :: OSI Approved :: "
                 "GNU General Public License v3 or later (GPLv3+)"),
-                "Operating System :: POSIX :: Linux",
-                "Programming Language :: Python :: 3",
-                "Programming Language :: Python :: 3.6",
-                "Programming Language :: Python :: Implementation :: CPython",
+            "Operating System :: POSIX :: Linux",
+            "Programming Language :: Python :: 3",
+            "Programming Language :: Python :: 3.6",
+            "Programming Language :: Python :: Implementation :: CPython",
         ],
         packages=["pwny"],
         zip_safe=False,
