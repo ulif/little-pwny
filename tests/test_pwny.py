@@ -17,7 +17,9 @@ def test_main(capsys):
     assert int(out) > 52000
 
 
-def test_main_none(capsys):
+def test_main_none(capsys, monkeypatch):
+    # sys.argv is used if no arg was passed in
+    monkeypatch.setattr("sys.argv", ["<scriptname>", "P@ssw0rd"])
     main()
     out, err = capsys.readouterr()
-    assert out == "asd"
+    assert int(out) > 52000
