@@ -15,3 +15,9 @@ def test_main(capsys):
     main("P@ssw0rd")
     out, err = capsys.readouterr()
     assert int(out) > 52000
+
+
+def test_main_none(capsys):
+    main()
+    out, err = capsys.readouterr()
+    assert out == "asd"
