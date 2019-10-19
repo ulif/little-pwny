@@ -1,4 +1,4 @@
-# pwny
+# little-pwny
 Check whether a password has been compromised
 
 Query the [have-i-been-pwned database](https://haveibeenpwned.com) for breaches
