@@ -25,20 +25,22 @@ Install
 with `pip` and possibly `virtualenv`
 ++++++++++++++++++++++++++++++++++++
 
-Create and activate a virtualenv:
+Create and activate a virtualenv::
 
      $ virtualenv env
      $ source ./env/bin/activate.sh
 
-Then, from this directory, install the package:
+Then, from this directory, install the package::
 
      $ pip install -e .
 
 
-## Running Tests
+Running Tests
+=============
 
 We use `tox` and `py.test` for testing. So,
 
+::
      $ pip install tox
      $ tox
 
