@@ -19,6 +19,9 @@ Instead we use the generoulsy offered API to deploy
 first five chars of the SHA1 hash of any given password. This way you can check
 new passwords without revealing them to the server (or any listening party).
 
+`little-pwny` requires no additional packages.
+
+
 Install
 =======
 
