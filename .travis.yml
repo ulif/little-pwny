@@ -8,7 +8,7 @@ before_install:
   # nothing to do, currently
 # command to install dependencies
 install:
-  - pip install -U pip setuptools tox
+  - pip install -U pip setuptools pytest tox
   - pip install -U -e "."
 # command to run tests
 script:
