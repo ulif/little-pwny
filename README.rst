@@ -5,7 +5,7 @@ Check whether a password has been compromised
 
 Query the `have-i-been-pwned database <https://haveibeenpwned.com>`_ for breaches
 that contain a given password. Returns the number of breaches found in the
-database:
+database::
 
     $ pwny p@ssw0rd
     51763
@@ -41,9 +41,8 @@ Then, from this directory, install the package::
 Running Tests
 =============
 
-We use `tox` and `py.test` for testing. So,
+We use `tox` and `py.test` for testing. So,::
 
-::
      $ pip install tox
      $ tox
 
