@@ -14,7 +14,7 @@ database::
     0
 
 At no time the raw password is transferred to https://haveibeenpwned.com.
-Instead we use the generoulsy offered API to deploy
+Instead we use the generously offered API to deploy
 `k-anonymity <https://en.wikipedia.org/wiki/K-anonymity>`_. I.e. we send the
 first five chars of the SHA1 hash of any given password. This way you can check
 new passwords without revealing them to the server (or any listening party).
