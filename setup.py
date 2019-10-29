@@ -1,9 +1,16 @@
+import os
 from setuptools import setup
+
+
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
 
 setup(
         name="little-pwny",
         version="0.1.dev0",
         description="Check whether your password has been pwnd",
+        long_description=read('README.rst') + '\n\n\n',
         url="https://github.com/ulif/little-pwny",
         author="ulif",
         author_email="uli@gnufix.de",
