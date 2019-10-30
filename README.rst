@@ -19,7 +19,7 @@ Instead we use the generously offered API to deploy
 first five chars of the SHA1 hash of any given password. This way you can check
 new passwords without revealing them to the server (or any listening party).
 
-`little-pwny` requires no additional packages.
+`little-pwny` requires no additional packages, but it does not run on Python 2.x.
 
 
 Install
