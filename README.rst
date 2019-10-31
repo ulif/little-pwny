@@ -25,8 +25,21 @@ new passwords without revealing them to the server (or any listening party).
 Install
 =======
 
-with `pip` and possibly `virtualenv`
-++++++++++++++++++++++++++++++++++++
+with `pip`
+++++++++++
+
+Simply::
+
+    $ pip install little-pwny
+
+
+From Source
++++++++++++
+
+Clone the source::
+
+     $ git clone https://github.com/ulif/little-pwny
+     $ cd little-pwny
 
 Create and activate a virtualenv::
 
@@ -35,7 +48,7 @@ Create and activate a virtualenv::
 
 Then, from this directory, install the package::
 
-     $ pip install -e .
+     [venv] $ pip install -e .
 
 
 Running Tests
