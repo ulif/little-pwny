@@ -11,6 +11,7 @@ setup(
         version="0.1.dev0",
         description="Check whether your password has been pwnd",
         long_description=read('README.rst') + '\n\n\n',
+        long_description_content_type='text/x-rst',
         url="https://github.com/ulif/little-pwny",
         author="ulif",
         author_email="uli@gnufix.de",
