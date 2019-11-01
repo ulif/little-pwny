@@ -8,7 +8,7 @@ def read(fname):
 
 setup(
         name="little-pwny",
-        version="0.1",
+        version="0.2.dev0",
         description="Check whether your password has been pwnd",
         long_description=read('README.rst') + '\n\n\n',
         long_description_content_type='text/x-rst',
