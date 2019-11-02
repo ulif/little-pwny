@@ -3,6 +3,9 @@ little-pwny
 
 Check whether a password has been compromised
 
+|bdg-build|
+
+
 Query the `have-i-been-pwned database <https://haveibeenpwned.com>`_ for breaches
 that contain a given password. Returns the number of breaches found in the
 database::
@@ -60,4 +63,8 @@ We use `tox` and `py.test` for testing. So,::
      $ tox
 
 should run all tests.
+
+.. |bdg-build| image:: https://travis-ci.org/ulif/little-pwny.svg?branch=master
+   :target: https://travis-ci.org/ulif/little-pwny
+   :alt: Build Status
 
