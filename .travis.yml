@@ -8,8 +8,8 @@ before_install:
   # nothing to do, currently
 # command to install dependencies
 install:
-  - pip install -U pip setuptools pytest
-  - pip install -U -e "."
+  - pip install -U pip setuptools
+  - pip install -U -e ".[test]"
 # command to run tests
 script:
   - py.test

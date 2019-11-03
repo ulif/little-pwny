@@ -6,6 +6,11 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
+tests_require = [
+    'pytest',
+]
+
+
 setup(
         name="little-pwny",
         version="0.2.dev0",
@@ -33,6 +38,10 @@ setup(
         ],
         packages=["pwny"],
         zip_safe=False,
+        extras_require={
+            'test': tests_require,
+        },
+        tests_require=tests_require,
         entry_points={
             'console_scripts': ['pwny = pwny:main']}
-        )
+)
