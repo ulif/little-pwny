@@ -3,7 +3,7 @@ little-pwny
 
 Check whether a password has been compromised
 
-|bdg-build|
+|bdg-build| \| |pypi-release|
 
 
 Query the `have-i-been-pwned database <https://haveibeenpwned.com>`_ for breaches
@@ -68,3 +68,6 @@ should run all tests.
    :target: https://travis-ci.org/ulif/little-pwny
    :alt: Build Status
 
+.. |pypi-release| image:: https://img.shields.io/pypi/v/little-pwny?color=006dad
+   :target: https://pypi.python.org/pypi/little-pwny/
+   :alt: Latest release
