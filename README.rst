@@ -1,5 +1,5 @@
 little-pwny
------------
+***********
 
 Check whether a password has been compromised
 
@@ -29,7 +29,7 @@ Install
 =======
 
 with `pip`
-++++++++++
+----------
 
 Simply::
 
@@ -37,7 +37,7 @@ Simply::
 
 
 From Source
-+++++++++++
+-----------
 
 Clone the source::
 
