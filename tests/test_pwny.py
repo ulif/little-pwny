@@ -29,7 +29,7 @@ def test_num_pwned(offline):
     # we get expectable numbers as results
     status, num = num_pwned("21BD12DC183F740EE76F27B78EB39C8AD972A757")
     assert status == 200
-    assert num > 52500
+    assert num == 52579
 
 
 def test_main(capsys, offline):
