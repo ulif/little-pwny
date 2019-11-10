@@ -36,7 +36,7 @@ def test_main(capsys, offline):
     # we can run the main function w/o trouble
     main("P@ssw0rd")
     out, err = capsys.readouterr()
-    assert int(out) > 52000
+    assert out == "52579\n"
 
 
 def test_main_none(capsys, offline, monkeypatch):
