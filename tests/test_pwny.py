@@ -44,4 +44,4 @@ def test_main_none(capsys, offline, monkeypatch):
     monkeypatch.setattr("sys.argv", ["<scriptname>", "P@ssw0rd"])
     main()
     out, err = capsys.readouterr()
-    assert int(out) > 52000
+    assert out == "52579\n"
