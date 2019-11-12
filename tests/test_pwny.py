@@ -17,7 +17,7 @@ def faux_urlopen(url):
 def offline(request, monkeypatch):
     # Replace network functions we use in tests with fake ones.
     monkeypatch.setattr(
-            "urllib.request.urlopen", faux_urlopen)
+        "urllib.request.urlopen", faux_urlopen)
 
 
 def test_mkhash():
