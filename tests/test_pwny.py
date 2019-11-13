@@ -22,7 +22,11 @@ def offline(request, monkeypatch):
 
 def test_mkhash():
     # the hashes we build are regular sha1 hashes
-    assert mkhash("P@ssw0rd") == "21BD12DC183F740EE76F27B78EB39C8AD972A757"
+    assert mkhash(
+            "P@ssw0rd") == "21BD12DC183F740EE76F27B78EB39C8AD972A757"
+    assert mkhash(
+            "aiPh1eehec8AhY2y") == "373DFCD311EB075C6B66B167F7FA188E5D4639A4"
+    assert mkhash("") == "DA39A3EE5E6B4B0D3255BFEF95601890AFD80709"
 
 
 def test_num_pwned(offline):
