@@ -1,2 +1,2 @@
-include README.rst LICENSE COPYRIGHT tox.ini
-recursive-include tests *.py
+include *.rst LICENSE COPYRIGHT tox.ini
+recursive-include tests *.py *.hash
