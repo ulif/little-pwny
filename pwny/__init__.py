@@ -9,7 +9,7 @@ def mkhash(password):
     HIBP API requests SHA1 hashed password.
     """
     return hashlib.sha1(
-            password.encode('utf-8')).hexdigest().upper()
+        password.encode('utf-8')).hexdigest().upper()
 
 
 def num_pwned(hash_val):
@@ -19,7 +19,7 @@ def num_pwned(hash_val):
     `hash_val`.
     """
     resp = urllib.request.urlopen(
-            "https://api.pwnedpasswords.com/range/%s" % hash_val[:5])
+        "https://api.pwnedpasswords.com/range/%s" % hash_val[:5])
     entries = resp.read().decode('utf-8').split('\r\n')
     result = dict([x.split(':') for x in entries]).get(hash_val[5:], 0)
     return resp.status, int(result)
