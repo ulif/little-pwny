@@ -1,6 +1,18 @@
+from argparse import ArgumentParser
 import hashlib
 import sys
 import urllib.request
+
+
+def handle_options(args):
+    """Handle commandline arguments.
+    """
+    parser = ArgumentParser(
+        description="Check, how often a passphrase appears "
+            "on haveibeenpwned.com")
+    parser.add_argument('passphrase', metavar='PASSPHRASE', nargs=1)
+    args = parser.parse_args(args)
+    return args
 
 
 def mkhash(password):
@@ -28,4 +40,5 @@ def num_pwned(hash_val):
 def main(argv=None):
     if argv is None:
         argv = sys.argv[1]
-    print(num_pwned(mkhash(argv))[1])
+    args = handle_options([argv])
+    print(num_pwned(mkhash(args.passphrase[0]))[1])
