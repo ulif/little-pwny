@@ -8,8 +8,8 @@ def handle_options(args):
     """Handle commandline arguments.
     """
     parser = ArgumentParser(
-        description="Check, how often a passphrase appears "
-            "on haveibeenpwned.com")
+        description=(
+            "Check, how often a passphrase appears on haveibeenpwned.com"))
     parser.add_argument('passphrase', metavar='PASSPHRASE', nargs=1)
     args = parser.parse_args(args)
     return args
