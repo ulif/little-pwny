@@ -1,6 +1,6 @@
 import os
 import pytest
-from pwny import mkhash, num_pwned, main
+from pwny import handle_options, mkhash, num_pwned, main
 
 
 def faux_urlopen(url):
@@ -49,3 +49,8 @@ def test_main_none(capsys, offline, monkeypatch):
     main()
     out, err = capsys.readouterr()
     assert out == "52579\n"
+
+
+def test_handle_options_defaults():
+    args = handle_options(['some-passphrase'])
+    args.passphrase == 'some-passphrase'
