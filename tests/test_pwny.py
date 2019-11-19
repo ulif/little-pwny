@@ -54,3 +54,12 @@ def test_main_none(capsys, offline, monkeypatch):
 def test_handle_options_defaults():
     args = handle_options(['some-passphrase'])
     args.passphrase == 'some-passphrase'
+
+
+def test_handle_options_no_phrase(capsys):
+    # we tell, that a passphrase is required
+    with pytest.raises(SystemExit) as exc_info:
+        handle_options([])
+    out, err = capsys.readouterr()
+    assert exc_info.value.code == 2
+    assert "the following arguments are required" in err
