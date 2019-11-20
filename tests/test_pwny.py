@@ -51,7 +51,8 @@ def test_main_none(capsys, offline, monkeypatch):
     assert out == "52579\n"
 
 
-def test_handle_options_defaults():
+def test_handle_options_passphrse():
+    # we can tell a passphrase to check
     args = handle_options(['some-passphrase'])
     args.passphrase == 'some-passphrase'
 
