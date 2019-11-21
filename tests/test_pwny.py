@@ -64,3 +64,12 @@ def test_handle_options_no_phrase(capsys):
     out, err = capsys.readouterr()
     assert exc_info.value.code == 2
     assert "the following arguments are required" in err
+
+
+def test_handle_options_help(capsys):
+    # we can get help if we want
+    with pytest.raises(SystemExit) as exc_info:
+        handle_options(['-h'])
+    out, err = capsys.readouterr()
+    assert exc_info.value.code == 0
+    assert "show this help message and exit" in out
