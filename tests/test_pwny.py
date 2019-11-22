@@ -73,3 +73,12 @@ def test_handle_options_help(capsys):
     out, err = capsys.readouterr()
     assert exc_info.value.code == 0
     assert "show this help message and exit" in out
+
+
+def test_handle_options_help_long(capsys):
+    # we support the long help option
+    with pytest.raises(SystemExit) as exc_info:
+        handle_options(['--help'])
+    out, err = capsys.readouterr()
+    assert exc_info.value.code == 0
+    assert "show this help message and exit" in out
