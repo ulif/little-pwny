@@ -1,8 +1,8 @@
-from argparse import ArgumentParser
 import hashlib
 import sys
 import urllib.request
 import pkg_resources
+from argparse import ArgumentParser
 
 
 __version__ = pkg_resources.get_distribution('little-pwny').version
