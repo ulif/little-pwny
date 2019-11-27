@@ -1,6 +1,7 @@
 import os
+import pkg_resources
 import pytest
-from pwny import handle_options, mkhash, num_pwned, main
+from pwny import print_version, handle_options, mkhash, num_pwned, main
 
 
 def faux_urlopen(url):
@@ -49,6 +50,14 @@ def test_main_none(capsys, offline, monkeypatch):
     main()
     out, err = capsys.readouterr()
     assert out == "52579\n"
+
+
+def test_print_version(capsys):
+    # We can output the current version.
+    print_version()
+    ver = pkg_resources.get_distribution("little-pwny").version
+    out, err = capsys.readouterr()
+    assert ver in out
 
 
 def test_handle_options_passphrse():
