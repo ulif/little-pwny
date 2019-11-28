@@ -39,12 +39,22 @@ def test_num_pwned(offline):
 
 def test_main(capsys, offline):
     # we can run the main function w/o trouble
-    main("P@ssw0rd")
+    main(["P@ssw0rd"])
     out, err = capsys.readouterr()
     assert out == "52579\n"
 
 
 def test_main_none(capsys, offline, monkeypatch):
+    # we provide usage hints in case no passphrase was given
+    monkeypatch.setattr("sys.argv", ["scriptname", ])
+    with pytest.raises(SystemExit) as exc_info:
+        main()
+    out, err = capsys.readouterr()
+    assert exc_info.value.code == 2
+    assert "the following arguments are required" in err
+
+
+def test_main_argv(capsys, offline, monkeypatch):
     # sys.argv is used if no arg was passed in
     monkeypatch.setattr("sys.argv", ["<scriptname>", "P@ssw0rd"])
     main()
