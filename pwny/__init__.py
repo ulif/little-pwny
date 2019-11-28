@@ -50,6 +50,6 @@ def num_pwned(hash_val):
 
 def main(argv=None):
     if argv is None:
-        argv = sys.argv[1]
-    args = handle_options([argv])
+        argv = sys.argv[1:]
+    args = handle_options(argv)
     print(num_pwned(mkhash(args.passphrase[0]))[1])
