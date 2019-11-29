@@ -22,6 +22,10 @@ def handle_options(args):
         description=(
             "Check, how often a passphrase appears on haveibeenpwned.com"))
     parser.add_argument('passphrase', metavar='PASSPHRASE', nargs=1)
+    parser.add_argument(
+        '--version', action='store_true',
+        help='output version information and exit.',
+        )
     args = parser.parse_args(args)
     return args
 
