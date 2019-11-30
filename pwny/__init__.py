@@ -56,4 +56,7 @@ def main(argv=None):
     if argv is None:
         argv = sys.argv[1:]
     args = handle_options(argv)
+    if args.version:
+        print_version()
+        sys.exit(0)
     print(num_pwned(mkhash(args.passphrase[0]))[1])
