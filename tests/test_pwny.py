@@ -101,3 +101,9 @@ def test_handle_options_help_long(capsys):
     out, err = capsys.readouterr()
     assert exc_info.value.code == 0
     assert "show this help message and exit" in out
+
+
+def test_handle_options_version():
+    # we support --version
+    args = handle_options(['--version'])
+    assert args.version is True
