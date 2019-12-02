@@ -51,7 +51,7 @@ def test_main_none(capsys, offline, monkeypatch):
         main()
     out, err = capsys.readouterr()
     assert exc_info.value.code == 2
-    assert "the following arguments are required" in err
+    assert "is required" in err
 
 
 def test_main_argv(capsys, offline, monkeypatch):
@@ -82,7 +82,7 @@ def test_handle_options_no_phrase(capsys):
         handle_options([])
     out, err = capsys.readouterr()
     assert exc_info.value.code == 2
-    assert "the following arguments are required" in err
+    assert "is required" in err
 
 
 def test_handle_options_help(capsys):
@@ -107,3 +107,4 @@ def test_handle_options_version():
     # we support --version
     args = handle_options(['--version'])
     assert args.version is True
+    assert args.passphrase is None

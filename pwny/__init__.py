@@ -21,11 +21,12 @@ def handle_options(args):
     parser = ArgumentParser(
         description=(
             "Check, how often a passphrase appears on haveibeenpwned.com"))
-    parser.add_argument('passphrase', metavar='PASSPHRASE', nargs=1)
-    parser.add_argument(
+    g = parser.add_mutually_exclusive_group(required=True)
+    g.add_argument(
         '--version', action='store_true',
         help='output version information and exit.',
         )
+    g.add_argument('passphrase', metavar='PASSPHRASE', nargs="?")
     args = parser.parse_args(args)
     return args
 
@@ -59,4 +60,4 @@ def main(argv=None):
     if args.version:
         print_version()
         sys.exit(0)
-    print(num_pwned(mkhash(args.passphrase[0]))[1])
+    print(num_pwned(mkhash(args.passphrase))[1])
