@@ -1,7 +1,8 @@
 import os
 import pkg_resources
 import pytest
-from pwny import print_version, handle_options, mkhash, num_pwned, main
+from pwny import (
+        __version__, print_version, handle_options, mkhash, num_pwned, main)
 
 
 def faux_urlopen(url):
@@ -60,6 +61,17 @@ def test_main_argv(capsys, offline, monkeypatch):
     main()
     out, err = capsys.readouterr()
     assert out == "52579\n"
+
+
+def test_main_version(capsys, offline, monkeypatch):
+    # we can get version infos.
+    monkeypatch.setattr("sys.argv", ["<scriptname>", "--version"])
+    with pytest.raises(SystemExit) as exc_info:
+        main()
+    out, err = capsys.readouterr()
+    assert exc_info.value.code == 0
+    assert "little-pwny" in out
+    assert __version__ in out
 
 
 def test_print_version(capsys):
