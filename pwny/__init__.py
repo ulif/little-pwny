@@ -12,7 +12,7 @@ def print_version():
     """Output current version and other infos.
     """
     print("little-pwny %s" % __version__)
-    print("Copyrright (C) 2019 ulif")
+    print("Copyright (C) 2019 ulif")
 
 
 def handle_options(args):
