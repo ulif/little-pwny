@@ -4,6 +4,7 @@ Changes
 0.2.dev0 (yet unreleased)
 -------------------------
 
+- Add support for commandline option `--version`.
 - Add support for commandline option `--help`.
 
 
