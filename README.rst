@@ -16,13 +16,15 @@ database::
     $ pwny aiPh1eehec8AhY2y
     0
 
+Please note, that the executable script is called `pwny`.
+
 At no time the raw password is transferred to https://haveibeenpwned.com.
-Instead we use the generously offered API to deploy
+Instead we use the generously offered haveibeenpwned.com-API to deploy
 `k-anonymity <https://en.wikipedia.org/wiki/K-anonymity>`_. I.e. we send the
 first five chars of the SHA1 hash of any given password. This way you can check
 new passwords without revealing them to the server (or any listening party).
 
-`little-pwny` requires no additional packages, but it does not run on Python 2.x.
+`little-pwny` requires no additional packages. It requires Python 3.x.
 
 
 Install
