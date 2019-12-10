@@ -4,7 +4,7 @@ Changes
 0.2.dev0 (yet unreleased)
 -------------------------
 
-- Officially support Python 3.5
+- Officially also support Python 3.5 and 3.7
 - Add support for commandline option `--version`.
 - Add support for commandline option `--help`.
 
