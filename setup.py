@@ -13,7 +13,7 @@ tests_require = [
 
 setup(
         name="little-pwny",
-        version="0.2.dev0",
+        version="0.2",
         description="Check whether your password has been pwnd",
         long_description=read(
             'README.rst') + '\n\n\n' + read('CHANGES.rst') + '\n\n\n',
