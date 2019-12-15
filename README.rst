@@ -8,7 +8,11 @@ Check whether a password has been compromised
 
 Query the `have-i-been-pwned database <https://haveibeenpwned.com>`_ for breaches
 that contain a given password. Returns the number of breaches found in the
-database::
+database.
+
+Please note, that the executable script is called `pwny`.
+
+::
 
     $ pwny p@ssw0rd
     51763
@@ -16,7 +20,11 @@ database::
     $ pwny aiPh1eehec8AhY2y
     0
 
-Please note, that the executable script is called `pwny`.
+Use::
+
+    $ pwny --help
+
+to learn more about all options supported.
 
 At no time the raw password is transferred to https://haveibeenpwned.com.
 Instead we use the generously offered haveibeenpwned.com-API to deploy
