@@ -1,16 +1,21 @@
 little-pwny
 ***********
 
-Check whether a password has been compromised
+Check whether a given passphrase has been compromised
 
 |bdg-build| \| |pypi-release|
 
 
-Query the `have-i-been-pwned database <https://haveibeenpwned.com>`_ for breaches
-that contain a given password. Returns the number of breaches found in the
-database.
+`little-pwny` queries the `have-i-been-pwned password database
+<https://haveibeenpwned.com/Passwords>`_ for breaches that contain a given
+passphrase and returns the number of breaches found. It does *not* reveal the
+plain passphrase to the database (nor to any other party, see below).
 
-Please note, that the executable script is called `pwny`.
+`little-pwny` works with plain Python 3.x and requires no additional packages.
+
+
+Usage
+=====
 
 ::
 
@@ -26,13 +31,15 @@ Use::
 
 to learn more about all options supported.
 
+Please note, that the Python package is called `little-pwny` while the
+executable script is called `pwny`.
+
 At no time the raw password is transferred to https://haveibeenpwned.com.
 Instead we use the generously offered haveibeenpwned.com-API to deploy
 `k-anonymity <https://en.wikipedia.org/wiki/K-anonymity>`_. I.e. we send the
 first five chars of the SHA1 hash of any given password. This way you can check
-new passwords without revealing them to the server (or any listening party).
+new passwords without revealing them to the server (or any other party).
 
-`little-pwny` requires no additional packages. It requires Python 3.x.
 
 
 Install
@@ -56,8 +63,8 @@ Clone the source::
 
 Create and activate a virtualenv::
 
-     $ virtualenv env
-     $ source ./env/bin/activate.sh
+     $ virtualenv venv
+     $ source ./venv/bin/activate.sh
 
 Then, from this directory, install the package::
 
