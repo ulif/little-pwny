@@ -15,7 +15,10 @@ setup(
     name="little-pwny",
     version="0.3.dev0",
     description="Check whether your password has been pwnd",
-    long_description=read("README.rst") + "\n\n\n" + read("CHANGES.rst") + "\n\n\n",
+    long_description=read("README.rst")
+    + "\n\n\n"
+    + read("CHANGES.rst")
+    + "\n\n\n",
     long_description_content_type="text/x-rst",
     url="https://github.com/ulif/little-pwny",
     author="ulif",

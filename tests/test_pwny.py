@@ -1,13 +1,21 @@
 import os
 import pkg_resources
 import pytest
-from pwny import __version__, print_version, handle_options, mkhash, num_pwned, main
+from pwny import (
+    __version__,
+    print_version,
+    handle_options,
+    mkhash,
+    num_pwned,
+    main,
+)
 
 
 def faux_urlopen(url):
     # A replacement for `urllib.request.urlopen`
     path = os.path.join(
-        os.path.dirname(__file__), "21BD12DC183F740EE76F27B78EB39C8AD972A757.hash"
+        os.path.dirname(__file__),
+        "21BD12DC183F740EE76F27B78EB39C8AD972A757.hash",
     )
     f = open(path, "rb")
     f.status = 200
@@ -23,7 +31,10 @@ def offline(request, monkeypatch):
 def test_mkhash():
     # the hashes we build are regular sha1 hashes
     assert mkhash("P@ssw0rd") == "21BD12DC183F740EE76F27B78EB39C8AD972A757"
-    assert mkhash("aiPh1eehec8AhY2y") == "373DFCD311EB075C6B66B167F7FA188E5D4639A4"
+    assert (
+        mkhash("aiPh1eehec8AhY2y")
+        == "373DFCD311EB075C6B66B167F7FA188E5D4639A4"
+    )
     assert mkhash("") == "DA39A3EE5E6B4B0D3255BFEF95601890AFD80709"
 
 

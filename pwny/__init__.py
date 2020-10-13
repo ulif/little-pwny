@@ -36,7 +36,9 @@ def print_version():
 def handle_options(args):
     """Handle commandline arguments."""
     parser = ArgumentParser(
-        description=("Check, how often a passphrase appears on haveibeenpwned.com")
+        description=(
+            "Check, how often a passphrase appears on haveibeenpwned.com"
+        )
     )
     g = parser.add_mutually_exclusive_group(required=True)
     g.add_argument(
