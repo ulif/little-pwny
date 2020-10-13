@@ -4,7 +4,7 @@ Changes
 0.3.dev0 (yet unreleased)
 -------------------------
 
-No changes yet.
+- Officially also support Python 3.8.
 
 
 0.2 (2019-12-12)
