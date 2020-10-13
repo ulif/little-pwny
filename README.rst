@@ -45,12 +45,25 @@ new passwords without revealing them to the server (or any other party).
 Install
 =======
 
+You need at least some Python3 interpreter installed on your System.
+
 with `pip`
 ----------
 
 Simply::
 
-    $ pip install little-pwny
+    $ pip3 install little-pwny
+
+If `pip` is not installed on your system, chances are, your Python3 comes with
+`pip` included::
+
+    $ python3 -m pip install little-pwny
+
+If that fails as well, you might use your systems package manager to install
+`pip3`. On Ubuntu for instance this will do::
+
+    $ sudo apt install python3-pip
+    $ sudo pip3 install little-pwny
 
 
 From Source
