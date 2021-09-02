@@ -95,8 +95,8 @@ We use `tox` and `py.test` for testing. So,::
 should run all tests.
 
 
-.. |bdg-tests| image:: https://github.com/ulif/little-pwny/actions/workflows/python-app.yml/badge.svg?branch=master
-   :target: https://github.com/ulif/little-pwny/actions/workflows/python-app.yml
+.. |bdg-tests| image:: https://github.com/ulif/little-pwny/actions/workflows/tests.yml/badge.svg?branch=master
+   :target: https://github.com/ulif/little-pwny/actions/workflows/tests.yml
    :alt: Test Status
 
 .. |pypi-release| image:: https://img.shields.io/pypi/v/little-pwny?color=006dad
