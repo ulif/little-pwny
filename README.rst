@@ -3,7 +3,7 @@ little-pwny
 
 Check whether a given passphrase has been compromised
 
-|bdg-build| \| |pypi-release|
+|bdg-tests| \| |pypi-release|
 
 
 `little-pwny` queries the `have-i-been-pwned password database
@@ -94,9 +94,10 @@ We use `tox` and `py.test` for testing. So,::
 
 should run all tests.
 
-.. |bdg-build| image:: https://travis-ci.org/ulif/little-pwny.svg?branch=master
-   :target: https://travis-ci.org/ulif/little-pwny
-   :alt: Build Status
+
+.. |bdg-tests| image:: https://github.com/ulif/little-pwny/actions/workflows/python-app.yml/badge.svg?branch=master
+   :target: https://github.com/ulif/little-pwny/actions/workflows/python-app.yml
+   :alt: Test Status
 
 .. |pypi-release| image:: https://img.shields.io/pypi/v/little-pwny?color=006dad
    :target: https://pypi.python.org/pypi/little-pwny/
