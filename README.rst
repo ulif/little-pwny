@@ -1,9 +1,17 @@
-little-pwny
-***********
+little-pwny - moved to `codeberg.org <https://codeberg.org/ulif/little-pwny>`_
+******************************************************************************
+
+.. note::
+    This project has been moved to https://codeberg.org/ulif/little-pwny in
+    February 2022.
+
+    All further development happens over there.
+
+
 
 Check whether a given passphrase has been compromised
 
-|bdg-tests| \| |pypi-release|
+|pypi-release|
 
 
 `little-pwny` queries the `have-i-been-pwned password database
